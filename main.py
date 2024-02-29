@@ -19,7 +19,7 @@ def run():
             help="Basic function, showing the status of the server, by responding ping if online.",
             description="Help [$ping]",
             brief="Answers with pong.",
-            enabled=False,
+            enabled=True,
             hidden=False
     )
     async def ping(ctx : commands.Context):
