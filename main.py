@@ -16,14 +16,14 @@ def run():
 
     @bot.command(
             aliases=['p'],
-            help="This is help",
-            description="This is description",
-            brief="This is brief",
-            enabled=True,
+            help="Basic function, showing the status of the server, by responding ping if online.",
+            description="Help [$ping]",
+            brief="Answers with pong.",
+            enabled=False,
             hidden=False
     )
     async def ping(ctx : commands.Context):
-        """ Answers with pong."""
+        """Answers with pong."""
         embed = discord.Embed(colour=discord.Colour.green(), title="PONG")
         await ctx.send(embed=embed)
 
