@@ -1,3 +1,4 @@
+import pathlib
 import os
 import logging
 from logging.config import dictConfig
@@ -7,6 +8,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DISCORD_API_SECRET = os.getenv("DISCORD_API_TOKEN")
+
+BASE_DIR = pathlib.Path(__file__).parent
+
+COMMANDES_DIR = BASE_DIR / "commandes"
+COGS_DIR = BASE_DIR / "cogs"
 
 LOGGING_CONFIG = {
     "version": 1,
